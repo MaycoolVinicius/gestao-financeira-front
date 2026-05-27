@@ -84,3 +84,43 @@ border-bottom:1px solid #ddd;
   background: #94a3b8;
   cursor: not-allowed;
 }
+.formulario {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.formulario input,
+.formulario select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.08);
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #00cec9;
+  box-shadow: 0 0 0 3px rgba(0,206,201,.15);
+}
+
+.formulario button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.formulario button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,206,201,.25);
+}
