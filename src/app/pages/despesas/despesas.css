@@ -30,10 +30,12 @@ border-bottom:1px solid #ddd;
 
 }
 
-tr:hover{
+:host-context(body.dark) tbody tr:hover {
+  background: rgba(255,255,255,.06);
+}
 
-background:#f5f5f5;
-
+:host-context(body:not(.dark)) tbody tr:hover {
+  background: #f1f5f9;
 }
 .filtros{
 
