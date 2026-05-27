@@ -141,3 +141,21 @@ body.dark a:hover{
 background:#1e293b;
 
 }
+:host-context(body.dark) .formulario {
+  background: #1e293b;
+}
+
+:host-context(body.dark) .formulario h2 {
+  color: white;
+}
+
+:host-context(body.dark) .formulario input,
+:host-context(body.dark) .formulario select {
+  background: #0f172a;
+  color: white;
+  border-color: #334155;
+}
+
+:host-context(body.dark) .formulario input::placeholder {
+  color: #94a3b8;
+}
