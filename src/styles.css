@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+body{
+transition:.3s;
+}
+
+body.dark{
+
+background:#0f172a;
+
+color:#e5e7eb;
+
+}
+
+/* conteúdo */
+
+body.dark .conteudo{
+
+background:#111827;
+
+}
+
+/* sidebar */
+
+body.dark .sidebar{
+
+background:#020617;
+
+}
+
+/* textos */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark th,
+body.dark td,
+body.dark label{
+
+color:#f8fafc;
+
+}
+
+/* cards dashboard */
+
+body.dark .card{
+
+box-shadow:
+0 8px 20px
+rgba(0,0,0,.4);
+
+}
+
+/* tabelas */
+
+body.dark table{
+
+background:#1e293b;
+
+border-radius:16px;
+
+overflow:hidden;
+
+}
+
+body.dark td{
+
+border-bottom:
+1px solid #334155;
+
+}
+
+/* inputs */
+
+body.dark input,
+body.dark select{
+
+background:#1e293b;
+
+border:
+1px solid #334155;
+
+color:white;
+
+}
+
+body.dark input::placeholder{
+
+color:#94a3b8;
+
+}
+
+/* gráficos */
+
+body.dark .grafico-card{
+
+background:#1e293b;
+
+}
+
+body.dark canvas{
+
+filter:
+brightness(1.1);
+
+}
+
+/* botões */
+
+body.dark button{
+
+border:none;
+
+}
+
+/* hover */
+
+body.dark a:hover{
+
+background:#1e293b;
+
+}

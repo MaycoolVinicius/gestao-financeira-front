@@ -1,0 +1,36 @@
+<div class="container">
+
+<h1>Nova Receita</h1>
+
+<input
+[(ngModel)]="descricao"
+placeholder="Descrição"
+/>
+
+<input
+type="number"
+[(ngModel)]="valor"
+placeholder="Valor"
+/>
+
+<input
+type="date"
+[(ngModel)]="data"
+/>
+
+<select [(ngModel)]="categoria">
+  <option value="SALARIO">SALARIO</option>
+  <option value="FREELANCE">FREELANCE</option>
+  <option value="INVESTIMENTOS">INVESTIMENTOS</option>
+  <option value="OUTROS">OUTROS</option>
+</select>
+
+<button
+(click)="salvar()"
+>
+
+Salvar
+
+</button>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="reset-page">
+
+<div class="reset-card">
+
+<div class="logo">
+🔒
+</div>
+
+<h1>Nova senha</h1>
+
+<p class="subtitulo">
+Digite sua nova senha.
+</p>
+
+<div class="campo">
+
+<label>Nova senha</label>
+
+<input
+type="password"
+[(ngModel)]="senha"
+placeholder="Digite nova senha"
+/>
+
+</div>
+
+<div class="campo">
+
+<label>Confirmar senha</label>
+
+<input
+type="password"
+[(ngModel)]="confirmarSenha"
+placeholder="Confirme nova senha"
+/>
+
+</div>
+
+<button
+(click)="salvar()"
+[disabled]="carregando"
+>
+
+{{ carregando
+? 'Salvando...'
+: 'Redefinir senha'
+}}
+
+</button>
+
+</div>
+
+</div>

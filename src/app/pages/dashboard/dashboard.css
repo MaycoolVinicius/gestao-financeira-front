@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.dashboard {
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.receitas {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+}
+
+.despesas {
+  background: linear-gradient(135deg, #d63031, #ff7675);
+}
+
+.saldo {
+  background: linear-gradient(135deg, #0984e3, #74b9ff);
+}
+
+.graficos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.grafico-card h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.grafico-card {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.grafico-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.grafico-card canvas {
+  max-height: 300px !important;
+  max-width: 100% !important;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+  display: block;
+}
+@media (max-width: 768px) {
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+
+  .graficos {
+    grid-template-columns: 1fr;
+  }
+
+  .grafico-card {
+    height: auto;
+  }
+
+  canvas {
+    height: 260px !important;
+  }
+}
+.movimentacoes-card {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.movimentacoes-card h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.movimentacao {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.movimentacao:last-child {
+  border-bottom: none;
+}
+
+.icone {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.receita-icon {
+  background: #00b894;
+}
+
+.despesa-icon {
+  background: #d63031;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info small {
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.valor-receita {
+  color: #00b894;
+}
+
+.valor-despesa {
+  color: #d63031;
+}
+
+:host-context(body.dark) .movimentacoes-card {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+:host-context(body.dark) .movimentacoes-card h2 {
+  color: #ffffff;
+}
+
+:host-context(body.dark) .movimentacao {
+  border-bottom: 1px solid #334155;
+}
+
+:host-context(body.dark) .info strong {
+  color: #ffffff;
+}
+
+:host-context(body.dark) .info small {
+  color: #cbd5e1;
+}
+
+:host-context(body.dark) .valor-receita {
+  color: #00b894;
+}
+
+:host-context(body.dark) .valor-despesa {
+  color: #d63031;
+}
+.periodos {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.periodos button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #111827;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.periodos button.ativo {
+  background: #6366f1;
+  color: white;
+}
+
+:host-context(body.dark) .periodos button {
+  background: #1e293b;
+  color: white;
+}
+
+:host-context(body.dark) .periodos button.ativo {
+  background: #8b5cf6;
+}

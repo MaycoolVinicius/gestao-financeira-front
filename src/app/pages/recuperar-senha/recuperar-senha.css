@@ -1,0 +1,108 @@
+.recuperar-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, #6366f1, transparent 35%),
+    linear-gradient(135deg, #0f172a, #111827);
+  padding: 20px;
+}
+
+.recuperar-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 24px;
+  padding: 40px;
+  color: white;
+  box-shadow: 0 25px 60px rgba(0,0,0,.35);
+  backdrop-filter: blur(14px);
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e5e7eb;
+  font-weight: bold;
+}
+
+.campo input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.1);
+  color: white;
+  outline: none;
+}
+
+.campo input::placeholder {
+  color: #94a3b8;
+}
+
+.campo input:focus {
+  border-color: #8b5cf6;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(139,92,246,.25);
+}
+
+.acoes-recuperar {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.acoes-recuperar a {
+  color: #67e8f9;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.acoes-recuperar a:hover {
+  text-decoration: underline;
+}

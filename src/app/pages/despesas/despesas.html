@@ -1,0 +1,167 @@
+<div class="container">
+
+  <div class="topo">
+    <h1>Despesas</h1>
+
+    <button class="btn-novo" (click)="abrirFormulario()">
+      + Nova Despesa
+    </button>
+    <div class="filtros">
+
+<input
+
+[(ngModel)]="busca"
+
+placeholder=
+"Buscar despesa..."
+
+/>
+
+<select
+
+[(ngModel)]="categoriaFiltro"
+
+>
+
+<option value="">
+Todas categorias
+</option>
+
+<option value="ALIMENTACAO">
+ALIMENTACAO
+</option>
+
+<option value="TRANSPORTE">
+TRANSPORTE
+</option>
+
+<option value="MORADIA">
+MORADIA
+</option>
+
+<option value="SAUDE">
+SAUDE
+</option>
+
+<option value="EDUCACAO">
+EDUCACAO
+</option>
+
+<option value="LAZER">
+LAZER
+</option>
+
+<option value="OUTROS">
+OUTROS
+</option>
+
+</select>
+
+</div>
+  </div>
+
+  <div class="formulario" *ngIf="mostrarFormulario">
+      <input
+    type="file"
+    accept="image/*, application/pdf"
+    (change)="selecionarArquivo($event)"
+      />
+    <h2>
+      {{ editando ? 'Editar Despesa' : 'Nova Despesa' }}
+    </h2>
+
+    <input [(ngModel)]="descricao" placeholder="Descrição" />
+
+    <input type="number" [(ngModel)]="valor" placeholder="Valor" />
+
+    <input type="date" [(ngModel)]="data" />
+
+    <select [(ngModel)]="categoria">
+      <option value="ALIMENTACAO">ALIMENTACAO</option>
+      <option value="TRANSPORTE">TRANSPORTE</option>
+      <option value="MORADIA">MORADIA</option>
+      <option value="SAUDE">SAUDE</option>
+      <option value="EDUCACAO">EDUCACAO</option>
+      <option value="LAZER">LAZER</option>
+      <option value="OUTROS">OUTROS</option>
+    </select>
+
+    <button class="btn-salvar" (click)="salvar()">
+      Salvar
+    </button>
+
+    <button class="btn-cancelar" (click)="fecharFormulario()">
+      Cancelar
+    </button>
+
+  </div>
+  
+  <table>
+
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="
+let despesa
+of despesasFiltradas()
+">
+        <td>{{ despesa.descricao }}</td>
+        <td>R$ {{ despesa.valor }}</td>
+        <td>{{ despesa.data }}</td>
+        <td>{{ despesa.categoria }}</td>
+        <td>
+          <button class="btn-editar" (click)="editar(despesa)">Editar</button>
+          <button class="btn-excluir" (click)="excluir(despesa.id)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+  <div class="paginacao">
+
+<button
+(click)="paginaAnterior()"
+[disabled]="paginaAtual===0"
+>
+
+Anterior
+
+</button>
+
+<span>
+
+Página
+{{ paginaAtual + 1 }}
+
+de
+
+{{ totalPaginas }}
+
+</span>
+
+<button
+
+(click)="proximaPagina()"
+
+[disabled]="
+paginaAtual + 1
+>=
+totalPaginas
+"
+
+>
+
+Próxima
+
+</button>
+
+</div>
+</div>

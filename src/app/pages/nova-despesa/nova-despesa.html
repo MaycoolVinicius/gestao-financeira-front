@@ -1,0 +1,51 @@
+<div class="container">
+
+<h1>Nova Despesa</h1>
+
+<input
+[(ngModel)]="descricao"
+placeholder="Descrição"
+/>
+
+<input
+type="number"
+[(ngModel)]="valor"
+placeholder="Valor"
+/>
+
+<input
+type="date"
+[(ngModel)]="data"
+/>
+
+<select
+[(ngModel)]="categoria"
+>
+
+<option value="ALIMENTACAO">
+ALIMENTACAO
+</option>
+
+<option value="TRANSPORTE">
+TRANSPORTE
+</option>
+
+<option value="LAZER">
+LAZER
+</option>
+
+<option value="MORADIA">
+MORADIA
+</option>
+
+</select>
+
+<button
+(click)="salvar()"
+>
+
+Salvar
+
+</button>
+
+</div>

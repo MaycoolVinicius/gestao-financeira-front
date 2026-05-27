@@ -1,0 +1,45 @@
+<div class="recuperar-page">
+
+  <div class="recuperar-card">
+
+    <div class="logo">
+      🔐
+    </div>
+
+    <h1>Recuperar senha</h1>
+
+    <p class="subtitulo">
+      Informe seu email e enviaremos instruções para redefinir sua senha.
+    </p>
+
+    <div class="campo">
+      <label>Email</label>
+
+      <input
+        type="email"
+        placeholder="Digite seu email"
+        [(ngModel)]="email"
+      />
+    </div>
+
+    <button
+    (click)="enviar()"
+    [disabled]="carregando"
+    >
+
+    {{ carregando
+    ? 'Enviando...'
+    : 'Enviar instruções'
+    }}
+
+    </button>
+
+    <div class="acoes-recuperar">
+      <a routerLink="/login">
+        Voltar para o login
+      </a>
+    </div>
+
+  </div>
+
+</div>

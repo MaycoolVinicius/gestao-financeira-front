@@ -1,0 +1,51 @@
+<div class="login-page">
+
+  <div class="login-card">
+
+    <div class="logo">
+      💸
+    </div>
+
+    <h1>Gestão Financeira</h1>
+
+    <p class="subtitulo">
+      Acesse sua conta para controlar suas receitas e despesas
+    </p>
+
+    <div class="campo">
+      <label>Email</label>
+
+      <input
+        type="email"
+        placeholder="Digite seu email"
+        [(ngModel)]="email"
+      />
+    </div>
+
+    <div class="campo">
+      <label>Senha</label>
+
+      <input
+        type="password"
+        placeholder="Digite sua senha"
+        [(ngModel)]="senha"
+      />
+    </div>
+
+    <button (click)="entrar()">
+      Entrar
+    </button>
+
+    <div class="acoes-login">
+      <a routerLink="/cadastro">
+        Criar conta
+      </a>
+
+      <a routerLink="/recuperar-senha">
+        Esqueci minha senha
+      </a>
+    </div>
+
+  </div>
+
+</div>

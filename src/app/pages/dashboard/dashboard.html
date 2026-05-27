@@ -1,0 +1,83 @@
+<div class="dashboard" *ngIf="dashboard">
+
+  <h1>Olá, {{ dashboard.nome }} 👋</h1>
+  <button class="btn-pdf" (click)="exportarPdf()">
+    📄 Exportar PDF
+  </button>
+  <div class="cards">
+
+    <div class="card receitas">
+      <h3>Receitas</h3>
+      <p>R$ {{ dashboard.totalReceitas }}</p>
+    </div>
+
+    <div class="card despesas">
+      <h3>Despesas</h3>
+      <p>R$ {{ dashboard.totalDespesas }}</p>
+    </div>
+
+    <div class="card saldo">
+      <h3>Saldo</h3>
+      <p>R$ {{ dashboard.saldo }}</p>
+    </div>
+
+  </div>
+
+ <div class="graficos">
+
+  <div class="grafico-card">
+    <h2>Receitas x Despesas</h2>
+
+    <canvas
+      baseChart
+      [data]="barChartData"
+      [options]="barChartOptions"
+      [type]="'bar'">
+    </canvas>
+  </div>
+
+  <div class="grafico-card">
+    <h2>Gastos por Categoria</h2>
+    
+    <canvas
+      baseChart
+      [data]="pieChartData"
+      [options]="pieChartOptions"
+      [type]="'pie'">
+    </canvas>
+  </div>
+
+</div>
+  <div class="movimentacoes-card">
+
+  <h2>Últimas movimentações</h2>
+
+  <div
+    class="movimentacao"
+    *ngFor="let item of movimentacoes"
+  >
+
+    <span
+      class="icone"
+      [class.receita-icon]="item.tipo === 'RECEITA'"
+      [class.despesa-icon]="item.tipo === 'DESPESA'"
+    >
+      {{ item.tipo === 'RECEITA' ? '↑' : '↓' }}
+    </span>
+
+    <div class="info">
+      <strong>{{ item.descricao }}</strong>
+      <small>{{ item.data }} • {{ item.categoria }}</small>
+    </div>
+
+    <strong
+      [class.valor-receita]="item.tipo === 'RECEITA'"
+      [class.valor-despesa]="item.tipo === 'DESPESA'"
+    >
+      R$ {{ item.valor }}
+    </strong>
+
+  </div>
+
+</div>
+</div>
