@@ -24,7 +24,7 @@ export interface ReceitaPage {
 })
 export class ReceitaService {
 
-  private api = 'http://localhost:3000/receitas';
+  private api = 'https://gestao-financeira-api-y0el.onrender.com/receitas';
 
   constructor(private http: HttpClient) {}
 

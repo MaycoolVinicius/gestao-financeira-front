@@ -41,7 +41,7 @@ export class RecuperarSenhaComponent {
     this.carregando = true;
 
     this.http.post(
-      'http://localhost:3000/usuarios/recuperar-senha',
+      'https://gestao-financeira-api-y0el.onrender.com/usuarios/recuperar-senha',
       {
         email: this.email
       }

@@ -15,7 +15,7 @@ interface LoginResponse {
   providedIn: 'root'
 })
 export class Auth {
-  private apiUrl = 'http://localhost:3000/auth';
+  private apiUrl = 'https://gestao-financeira-api-y0el.onrender.com/auth';
 
   constructor(private http: HttpClient) {}
 

@@ -23,7 +23,7 @@ export interface DespesaPage {
 export class DespesaService {
  
   private api =
-    'http://localhost:3000/despesas';
+    'https://gestao-financeira-api-y0el.onrender.com/despesas';
 
   constructor(
     private http: HttpClient

@@ -57,7 +57,7 @@ return;
     };
 
     this.http.post(
-      'http://localhost:3000/usuarios',
+      'https://gestao-financeira-api-y0el.onrender.com/usuarios',
       dados
     ).subscribe({
       next: () => {

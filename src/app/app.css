@@ -93,7 +93,13 @@ scale(1.03);
   background: #f5f6fa;
   overflow: visible;
 }
-
+.conteudo-publico {
+  flex: 1;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: #0f172a;
+}
 
 @media (max-width: 768px) {
 

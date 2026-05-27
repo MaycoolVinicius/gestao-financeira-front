@@ -1,5 +1,25 @@
 @import 'ngx-toastr/toastr';
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #0f172a;
+  overflow-x: hidden;
+}
 
+body {
+  overflow-x: hidden;
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #6366f1, transparent 35%),
+    linear-gradient(135deg, #0f172a, #111827);
+}
 body{
 transition:.3s;
 }

@@ -168,7 +168,7 @@ pieChartOptions: ChartConfiguration<'pie'>['options'] = {
   }
   exportarPdf() {
   this.http.get(
-    'http://localhost:3000/relatorios/dashboard/pdf',
+    'https://gestao-financeira-api-y0el.onrender.com/relatorios/dashboard/pdf',
     {
       responseType: 'blob'
     }

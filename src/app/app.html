@@ -22,8 +22,11 @@
 
   </nav>
 
-  <main class="conteudo">
-    <router-outlet></router-outlet>
-  </main>
+  <main
+  [class.conteudo]="!estaEmTelaPublica()"
+  [class.conteudo-publico]="estaEmTelaPublica()"
+>
+  <router-outlet></router-outlet>
+</main>
 
 </div>
