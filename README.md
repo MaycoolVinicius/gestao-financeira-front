@@ -1,59 +1,140 @@
-# GestaoFinanceiraFront
+# 💸 Gestão Financeira - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+Frontend da aplicação Gestão Financeira, desenvolvido em Angular para auxiliar no controle de receitas, despesas e acompanhamento financeiro pessoal.
 
-## Development server
+## 🚀 Acesse o projeto
 
-To start a local development server, run:
+🌐 Produção:
+https://gestao-financeira-front-three.vercel.app
+
+## 📸 Funcionalidades
+
+- ✅ Login de usuários
+- ✅ Cadastro de usuários
+- ✅ Recuperação de senha por e-mail
+- ✅ Redefinição de senha
+- ✅ Dashboard financeiro
+- ✅ Cadastro de receitas
+- ✅ Cadastro de despesas
+- ✅ Filtros de pesquisa
+- ✅ Paginação
+- ✅ Exportação de relatórios em PDF
+- ✅ Tema claro/escuro
+- ✅ Proteção de rotas com AuthGuard
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+### Frontend
+- Angular
+- TypeScript
+- HTML5
+- CSS3
+- RxJS
+- Angular Router
+- ngx-toastr
+
+### Backend
+- Spring Boot
+- Spring Security
+- JWT
+- PostgreSQL
+
+### Deploy
+- Vercel (Frontend)
+- Render (Backend)
+- Render PostgreSQL (Banco de Dados)
+
+---
+
+## 📂 Estrutura do Projeto
+
+```bash
+src/
+│
+├── app/
+│   ├── components/
+│   ├── guards/
+│   ├── interceptors/
+│   ├── pages/
+│   │   ├── login/
+│   │   ├── cadastro/
+│   │   ├── dashboard/
+│   │   ├── receitas/
+│   │   ├── despesas/
+│   │   ├── recuperar-senha/
+│   │   └── redefinir-senha/
+│   │
+│   └── services/
+│
+├── assets/
+└── styles.css
+```
+
+---
+
+## ⚙️ Executando localmente
+
+### Clonar o projeto
+
+```bash
+git clone https://github.com/MaycoolVinicius/gestao-financeira-front.git
+```
+
+### Entrar na pasta
+
+```bash
+cd gestao-financeira-front
+```
+
+### Instalar dependências
+
+```bash
+npm install
+```
+
+### Executar
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Aplicação disponível em:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🔐 Segurança
 
-## Building
+- Autenticação via JWT
+- Proteção de rotas com AuthGuard
+- Interceptor para envio automático do token
+- Recuperação segura de senha por token temporário
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📈 Melhorias Futuras
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- [ ] Gráficos financeiros
+- [ ] Metas de economia
+- [ ] Categorias personalizadas
+- [ ] Dashboard avançado
+- [ ] Responsividade mobile completa
+- [ ] Upload de comprovantes
+- [ ] Domínio personalizado
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 👨‍💻 Desenvolvedor
 
-```bash
-ng test
-```
+Maycool Vinicius
 
-## Running end-to-end tests
+GitHub:
+https://github.com/MaycoolVinicius
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+LinkedIn:
+www.linkedin.com/in/maycool-vinicius
